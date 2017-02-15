@@ -1,9 +1,14 @@
 
 {% extends 'MasterPages/MasterPage.html'%}
 
+{% load staticfiles %}
 {% block title%} Hommie {% endblock%}
 {% block content %}
 
+	<link rel="stylesheet" href="{% static 'css/RichEditor.css' %}" />
+
+	<div id="container">
+	</div>
 
 	<div id="loading-bar">
 	</div>
