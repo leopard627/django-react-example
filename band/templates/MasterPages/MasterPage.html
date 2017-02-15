@@ -18,8 +18,9 @@
 
 <body>
 	{% block content %}
-
 	{% endblock %}
+
+
 
 	<script src="{%static 'bower_components/react/react.min.js'%}"></script>
 	<script src="{%static 'bower_components/react/react-dom.min.js'%}"></script>
@@ -27,20 +28,14 @@
 
 	{% if request.user.username == 'admin'%}
 		<script src="{%static 'bower_components/babel/browser.js' %}"></script>
-		<script type="text/babel" src="{%static 'js/indexReact.js' %}"></script>
+		<!--script type="text/babel" src="{%static 'js/indexReact.js' %}"></script-->
+		<script type="text/javascript" src="{%static 'js/dist/bundle.js' %}"></script>
 	{% else %}
-		<script type = type="text/babel" src="{% static 'js/indexReact.js' %}"></script>
+		<script type="text/javascript" src="{%static 'js/dist/bundle.js' %}"></script>
 
 	{% endif %}
 
-
- <!--div id="example"></div>
-	<script type="text/babel">
-		  ReactDOM.render(
-			<h1>Hello, world!</h1>,
-			document.getElementById('example')
-		  );
-	</script-->
+	<!--script type="text/javascript" src="{%static 'js/dist/bundle.js' %}"></script-->
 
 
 </body>
